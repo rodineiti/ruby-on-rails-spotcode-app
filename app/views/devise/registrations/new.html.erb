@@ -1,0 +1,47 @@
+<section class="hero">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <div class="column is-4 is-offset-4">
+                <div class="box">
+                    <br />
+                    <h2 class="title has-text-grey">Registro</h2>
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+                      <%= devise_error_messages! %>
+                      
+                        <div class="field">
+                            <div class="control">
+                                <%= f.label :email %><br />
+                                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "input is-large", placeholder: "Seu E-mail" %>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <%= f.label :password %><br />
+                                <% if @minimum_password_length %>
+                                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                                <% end %><br />
+                                <%= f.password_field :password, autocomplete: "new-password", class: "input is-large", placeholder: "Sua Senha" %>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="control">
+                                <%= f.label :password_confirmation %><br />
+                                <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "input is-large", placeholder: "Repita a Senha" %>
+                            </div>
+                        </div>
+                        
+                        <div class="actions">
+                          <%= f.submit "Sign up", class: "button is-block is-info is-large is-fullwidth" %>
+                        </div>
+                    <% end %>
+                </div>
+                <p class="has-text-grey">
+                    <%= render "devise/shared/links" %>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
