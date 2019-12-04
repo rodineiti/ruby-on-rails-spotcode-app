@@ -18,7 +18,7 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'duktape'
 
-gem 'devise', '~> 4.6.0'
+gem 'devise', '~> 4.7.1'
 gem "serviceworker-rails"
 
 # Use CoffeeScript for .coffee assets and views
